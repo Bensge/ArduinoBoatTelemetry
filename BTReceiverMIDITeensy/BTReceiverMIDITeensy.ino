@@ -2,62 +2,27 @@
 //Bennos Telemetry Receiver Sketch
 
 #include <SPI.h>
-#include "nRF24L01.h"
 #include "RF24.h"
-#include "printf.h"
 #include <Wire.h> 
-#include <LiquidCrystal_I2C.h>
-#include "TinyGPS++.h"
 #include <BTCommon.h>
 
-#define LCD 0
+
+#define __THROTTLER(n) throttler_##n
+#define _THROTTLER(n) __THROTTLER(n)
+#define _callEvery(INTERVAL,__COUNT,BLOCK) static unsigned long _THROTTLER(__COUNT) = 0; \
+                      if (millis() - _THROTTLER(__COUNT) >= INTERVAL){ \
+                        _THROTTLER(__COUNT) = millis(); \
+                        BLOCK \
+                      }
+
+#define callEvery(INTERVAL,BLOCK) _callEvery(INTERVAL,__COUNTER__,BLOCK)
+
 
 //Static variables
-#if defined(CORE_TEENSY)
 RF24 radio(9,10);
-#else
-RF24 radio(19,18);
-#endif
+
 const uint64_t pipes[2] = { 0xF0F0F0F0E1LL, 0xF0F0F0F0D2LL };
-#if LCD
-LiquidCrystal_I2C lcd(0x27,16,2);
-#endif
 
-
-byte satelliteChar[8] = {
-  0b00000,
-  0b00001,
-  0b11010,
-  0b11100,
-  0b01110,
-  0b10110,
-  0b00000,
-  0b00000
-};
-
-byte clockChar[8] = {
-  0x0,
-  0xe,
-  0x15,
-  0x17,
-  0x11,
-  0xe,
-  0x0
-};
-
-byte rightArrowChar[8] = {
-  0b00000,
-  0b00100,
-  0b00110,
-  0b11111,
-  0b00110,
-  0b00100,
-  0b00000,
-  0b00000
-};
-
-//Variables
-float maxSpeed = 0;
 
 //Functions
 void sendUSBPacket(BTPacket p);
@@ -70,80 +35,50 @@ void setup()
 {
   //PC Logging serial
 //  Serial.begin(9600);
-//  delay(3000);
+  delay(3000);
 //  while (!Serial);
 //  Serial.println("HI");
-//  Serial.print("sizeof(BTPacket) = "); Serial.println(sizeof(BTPacket));
+  //Serial.print("sizeof(BTPacket) = "); Serial.println(sizeof(BTPacket));
   //printf_begin();
   //nRF24
   radio.begin();
-  Serial.println("HI");
+  radio.enableDynamicPayloads();
+  radio.setDataRate(RF24_250KBPS);
+  radio.setPALevel(RF24_PA_MIN);
+  
+  //Serial.println("HI");
   radio.openWritingPipe(pipes[1]);
   radio.openReadingPipe(1,pipes[0]);
-Serial.println("HI");
+  //Serial.println("HI");
   radio.startListening();
   //radio.printDetails();
   //printf("Done\n");
 
-#if LCD
-  lcd.init();
-  lcd.createChar(satelliteCharID, satelliteChar);
-  lcd.createChar(clockCharID, clockChar);
-  lcd.createChar(rightArrowCharID, rightArrowChar);
-  lcd.backlight();
-  lcd.setCursor(0,0);
-  lcd.print("Bennos Telemetry");
-#endif
   //Serial.println("Done with setup");
 }
 
-BTPacket p;
+BTPacket p = {0};
 void loop()
 {
+//    callEvery(500,{
+//      Serial.println("Reccing");
+//    });
     while (radio.available())
     {
-      //Serial.println("Got p1");
-      radio.read(&p, sizeof(p));
-      //Serial.println("Got p");
+      int len = radio.getDynamicPayloadSize();
 
-      uint8_t nos = p.numberOfSatellites;
-      float speed = p.speed;
-
-      //Time
-      TinyGPSTime t;
-      t.setTime(p.time);
-      t.commit();
-
-      char timeString[12];
-      sprintf(timeString,"%02d:%02d:%02d:%02d",t.hour(),t.minute(),t.second(),t.centisecond());
-      Serial.print(timeString);
-#if LCD
-      lcd.clear();
-      lcd.setCursor(0,0);
-      lcd.write(clockCharID);
-      lcd.print(timeString);
-
-      //NOS
-      lcd.setCursor(0,1);
-      lcd.write((uint8_t)satelliteCharID);
-      lcd.print(String(nos,DEC));
-
-      //Speed
-      lcd.setCursor(5,1);
-      lcd.write((uint8_t)rightArrowCharID);
-      lcd.print(String(speed,2));
-      lcd.print("km/h");
-#endif
-      //p.printDescription();
-
-      if (speed > maxSpeed)
-        maxSpeed = speed;
-
-#if LCD
-      lcd.setCursor(12,0);
-#endif
+      if (len == 32)
+      {
+        //First 32 Bytes of our BTPacket
+        radio.read(&p, 32);
+      }
+      else if (len == sizeof(BTPacket) - 32)
+      {
+        radio.read(&p.temperature, len);
+      }
       
       sendUSBPacket(&p);
+      Serial.println(millis());
     }
 }
 
@@ -153,13 +88,17 @@ void sendUSBPacket(BTPacket *p)
   sendUSB((byte *)p,numberOfBytes);
 }
 
+byte message[4];
 void sendUSB(byte *buffer, unsigned int length)
 {
   unsigned int position = 0;
+  
   while (position < length)
   {
-    byte message[4] = {0x0B, 'g', 'g', 'g'};
-
+    message[0] = 0x0B;
+    message[1] = 'g';
+    message[2] = 'g';
+    message[3] = 'g';
     for (byte i = 0; i < 3; i++)
     {
       message[i + 1] = buffer[position++];
@@ -169,18 +108,20 @@ void sendUSB(byte *buffer, unsigned int length)
     }
 
 #if defined(CORE_TEENSY)
-    //usbMIDI.send_raw();
     usb_midi_write_packed(* (uint32_t*)&message[0] );
-    //usbMIDI.send_now();
+
+    //usb_tx(MIDI_TX_ENDPOINT, tx_packet);
+    
     usb_midi_flush_output();
-    while (usbMIDI.read()) {
-      // ignore incoming messages
-    }
+    //while (usbMIDI.read());
+
 #else
     MidiUSB.write(message,sizeof(message));
     MidiUSB.flush();
 #endif
   }
+  //usbMIDI.send_now();
+  //usb_midi_flush_output();
 }
 
 
