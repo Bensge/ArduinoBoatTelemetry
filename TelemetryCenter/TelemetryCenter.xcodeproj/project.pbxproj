@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D03795F1C382A2200D0F476 /* TCStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D03795E1C382A2200D0F476 /* TCStatusViewController.m */; };
+		9D174E8C1C3848BE001B32D3 /* TCChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D174E8B1C3848BE001B32D3 /* TCChartsViewController.swift */; };
+		9D1D38491C259533005F7F00 /* TCApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1D38481C259533005F7F00 /* TCApplication.m */; };
+		9D39B7541C3EEA2600F53F2D /* TCTrackRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D39B7531C3EEA2600F53F2D /* TCTrackRecorder.swift */; };
+		9D5E84261C54E34E006268A5 /* TCRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5E84251C54E34E006268A5 /* TCRecorderViewController.swift */; };
+		9D624EDB1C36F0BF00ADF06B /* MIDIController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D624EDA1C36F0BF00ADF06B /* MIDIController.mm */; };
+		9D624EDE1C37101400ADF06B /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D624EDD1C37101400ADF06B /* CoreMIDI.framework */; };
+		9D74C18D1C6B5597009359FD /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D74C18C1C6B5597009359FD /* main.mm */; };
+		9D74C1921C6B56E4009359FD /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D74C1911C6B56E4009359FD /* CoreMIDI.framework */; };
+		9D7C26091C6E3981009FE76A /* DZBluetoothSerialHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C26081C6E3980009FE76A /* DZBluetoothSerialHandler.swift */; };
+		9D7C260A1C6E39CC009FE76A /* DZBluetoothSerialHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C26081C6E3980009FE76A /* DZBluetoothSerialHandler.swift */; };
+		9D7C26121C6E39F4009FE76A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C26111C6E39F4009FE76A /* main.swift */; };
+		9D7C26161C6E3A09009FE76A /* DZBluetoothSerialHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C26081C6E3980009FE76A /* DZBluetoothSerialHandler.swift */; };
+		9D7C26181C6E41A0009FE76A /* BTController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C26171C6E41A0009FE76A /* BTController.swift */; };
+		9D7C261A1C6E612A009FE76A /* BTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7C26191C6E612A009FE76A /* BTCommon.m */; };
+		9D847F441C0F01B20037FB65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D847F431C0F01B20037FB65 /* main.m */; };
+		9D847F471C0F01B20037FB65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D847F461C0F01B20037FB65 /* AppDelegate.m */; };
+		9D847F4A1C0F01B20037FB65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D847F491C0F01B20037FB65 /* ViewController.m */; };
+		9D847F4D1C0F01B20037FB65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D847F4B1C0F01B20037FB65 /* Main.storyboard */; };
+		9D847F4F1C0F01B20037FB65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D847F4E1C0F01B20037FB65 /* Assets.xcassets */; };
+		9D847F521C0F01B20037FB65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D847F501C0F01B20037FB65 /* LaunchScreen.storyboard */; };
+		9D8A353A1C37F330003C799B /* genesis.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D8A35391C37F330003C799B /* genesis.png */; };
+		9D8A35401C3806C0003C799B /* TCStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D8A353F1C3806C0003C799B /* TCStatusLabel.m */; };
+		9DCEA0CB1C3946F500A6D718 /* TCChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCEA0CA1C3946F500A6D718 /* TCChartView.swift */; };
+		CC0F286C0513B0621D6F93C4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136D5BC7011E1E9F0A75A284 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D74C1881C6B5597009359FD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		9D7C260D1C6E39F4009FE76A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		136D5BC7011E1E9F0A75A284 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BDA75CEEFE1D7428BBB8FA0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9D03795D1C382A2200D0F476 /* TCStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStatusViewController.h; sourceTree = "<group>"; };
+		9D03795E1C382A2200D0F476 /* TCStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStatusViewController.m; sourceTree = "<group>"; };
+		9D174E8B1C3848BE001B32D3 /* TCChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCChartsViewController.swift; sourceTree = "<group>"; };
+		9D174E941C385A95001B32D3 /* SwiftBridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftBridging.h; path = ../SwiftBridging.h; sourceTree = "<group>"; };
+		9D1D38471C259533005F7F00 /* TCApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCApplication.h; sourceTree = "<group>"; };
+		9D1D38481C259533005F7F00 /* TCApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCApplication.m; sourceTree = "<group>"; };
+		9D1D384A1C25B70F005F7F00 /* TCMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMessageParser.h; sourceTree = "<group>"; };
+		9D1D384B1C25B70F005F7F00 /* TCMessageParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TCMessageParser.mm; sourceTree = "<group>"; };
+		9D39B7531C3EEA2600F53F2D /* TCTrackRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCTrackRecorder.swift; sourceTree = "<group>"; };
+		9D4DEBA31C26E45C00A5821E /* BTCommon.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = BTCommon.hpp; path = ../../../Arduino/libraries/BTCommon/BTCommon.hpp; sourceTree = "<group>"; wrapsLines = 1; };
+		9D5E84251C54E34E006268A5 /* TCRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCRecorderViewController.swift; sourceTree = "<group>"; };
+		9D624ED91C36F0BF00ADF06B /* MIDIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIController.h; sourceTree = "<group>"; };
+		9D624EDA1C36F0BF00ADF06B /* MIDIController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MIDIController.mm; sourceTree = "<group>"; };
+		9D624EDD1C37101400ADF06B /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		9D74C18A1C6B5597009359FD /* TCTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D74C18C1C6B5597009359FD /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		9D74C1911C6B56E4009359FD /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreMIDI.framework; sourceTree = DEVELOPER_DIR; };
+		9D7C26081C6E3980009FE76A /* DZBluetoothSerialHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DZBluetoothSerialHandler.swift; sourceTree = "<group>"; };
+		9D7C260F1C6E39F4009FE76A /* BTTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BTTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D7C26111C6E39F4009FE76A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9D7C26171C6E41A0009FE76A /* BTController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTController.swift; sourceTree = "<group>"; };
+		9D7C26191C6E612A009FE76A /* BTCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCommon.m; sourceTree = "<group>"; };
+		9D847F3F1C0F01B20037FB65 /* TelemetryCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelemetryCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D847F431C0F01B20037FB65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D847F451C0F01B20037FB65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D847F461C0F01B20037FB65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D847F481C0F01B20037FB65 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9D847F491C0F01B20037FB65 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9D847F4C1C0F01B20037FB65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D847F4E1C0F01B20037FB65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D847F511C0F01B20037FB65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D847F531C0F01B20037FB65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D8A35391C37F330003C799B /* genesis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = genesis.png; sourceTree = "<group>"; };
+		9D8A353E1C3806C0003C799B /* TCStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStatusLabel.h; sourceTree = "<group>"; };
+		9D8A353F1C3806C0003C799B /* TCStatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStatusLabel.m; sourceTree = "<group>"; };
+		9DCEA0CA1C3946F500A6D718 /* TCChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCChartView.swift; sourceTree = "<group>"; };
+		AEAC4070BD3C4ADD3A5C7C5E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D74C1871C6B5597009359FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D74C1921C6B56E4009359FD /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D7C260C1C6E39F4009FE76A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D847F3C1C0F01B20037FB65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D624EDE1C37101400ADF06B /* CoreMIDI.framework in Frameworks */,
+				CC0F286C0513B0621D6F93C4 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BC56618FBCFF814CBF6A115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D74C1911C6B56E4009359FD /* CoreMIDI.framework */,
+				9D624EDD1C37101400ADF06B /* CoreMIDI.framework */,
+				136D5BC7011E1E9F0A75A284 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D74C18B1C6B5597009359FD /* TCTester */ = {
+			isa = PBXGroup;
+			children = (
+				9D74C18C1C6B5597009359FD /* main.mm */,
+			);
+			path = TCTester;
+			sourceTree = "<group>";
+		};
+		9D7C26101C6E39F4009FE76A /* BTTester */ = {
+			isa = PBXGroup;
+			children = (
+				9D7C26111C6E39F4009FE76A /* main.swift */,
+			);
+			path = BTTester;
+			sourceTree = "<group>";
+		};
+		9D80E19A1C30088C00D4374F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		9D847F361C0F01B20037FB65 = {
+			isa = PBXGroup;
+			children = (
+				9D847F411C0F01B20037FB65 /* TelemetryCenter */,
+				9D74C18B1C6B5597009359FD /* TCTester */,
+				9D7C26101C6E39F4009FE76A /* BTTester */,
+				9D847F401C0F01B20037FB65 /* Products */,
+				A0D66FD9F5E959AC3E1DABF4 /* Pods */,
+				2BC56618FBCFF814CBF6A115 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D847F401C0F01B20037FB65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D847F3F1C0F01B20037FB65 /* TelemetryCenter.app */,
+				9D74C18A1C6B5597009359FD /* TCTester */,
+				9D7C260F1C6E39F4009FE76A /* BTTester */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D847F411C0F01B20037FB65 /* TelemetryCenter */ = {
+			isa = PBXGroup;
+			children = (
+				9D80E19A1C30088C00D4374F /* Data */,
+				9D847F451C0F01B20037FB65 /* AppDelegate.h */,
+				9D847F461C0F01B20037FB65 /* AppDelegate.m */,
+				9D847F481C0F01B20037FB65 /* ViewController.h */,
+				9D847F491C0F01B20037FB65 /* ViewController.m */,
+				9D1D38471C259533005F7F00 /* TCApplication.h */,
+				9D1D38481C259533005F7F00 /* TCApplication.m */,
+				9D1D384A1C25B70F005F7F00 /* TCMessageParser.h */,
+				9D1D384B1C25B70F005F7F00 /* TCMessageParser.mm */,
+				9D847F4B1C0F01B20037FB65 /* Main.storyboard */,
+				9D847F4E1C0F01B20037FB65 /* Assets.xcassets */,
+				9D847F501C0F01B20037FB65 /* LaunchScreen.storyboard */,
+				9D847F531C0F01B20037FB65 /* Info.plist */,
+				9D4DEBA31C26E45C00A5821E /* BTCommon.hpp */,
+				9D7C26191C6E612A009FE76A /* BTCommon.m */,
+				9D624ED91C36F0BF00ADF06B /* MIDIController.h */,
+				9D624EDA1C36F0BF00ADF06B /* MIDIController.mm */,
+				9D8A353E1C3806C0003C799B /* TCStatusLabel.h */,
+				9D8A353F1C3806C0003C799B /* TCStatusLabel.m */,
+				9D03795D1C382A2200D0F476 /* TCStatusViewController.h */,
+				9D03795E1C382A2200D0F476 /* TCStatusViewController.m */,
+				9D174E8B1C3848BE001B32D3 /* TCChartsViewController.swift */,
+				9DCEA0CA1C3946F500A6D718 /* TCChartView.swift */,
+				9D39B7531C3EEA2600F53F2D /* TCTrackRecorder.swift */,
+				9D5E84251C54E34E006268A5 /* TCRecorderViewController.swift */,
+				9D7C26081C6E3980009FE76A /* DZBluetoothSerialHandler.swift */,
+				9D7C26171C6E41A0009FE76A /* BTController.swift */,
+				9D174E941C385A95001B32D3 /* SwiftBridging.h */,
+				9D847F421C0F01B20037FB65 /* Supporting Files */,
+				9D8A35391C37F330003C799B /* genesis.png */,
+			);
+			path = TelemetryCenter;
+			sourceTree = "<group>";
+		};
+		9D847F421C0F01B20037FB65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D847F431C0F01B20037FB65 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0D66FD9F5E959AC3E1DABF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BDA75CEEFE1D7428BBB8FA0 /* Pods.debug.xcconfig */,
+				AEAC4070BD3C4ADD3A5C7C5E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D74C1891C6B5597009359FD /* TCTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D74C1901C6B5597009359FD /* Build configuration list for PBXNativeTarget "TCTester" */;
+			buildPhases = (
+				9D74C1861C6B5597009359FD /* Sources */,
+				9D74C1871C6B5597009359FD /* Frameworks */,
+				9D74C1881C6B5597009359FD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCTester;
+			productName = TCTester;
+			productReference = 9D74C18A1C6B5597009359FD /* TCTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		9D7C260E1C6E39F4009FE76A /* BTTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D7C26131C6E39F4009FE76A /* Build configuration list for PBXNativeTarget "BTTester" */;
+			buildPhases = (
+				9D7C260B1C6E39F4009FE76A /* Sources */,
+				9D7C260C1C6E39F4009FE76A /* Frameworks */,
+				9D7C260D1C6E39F4009FE76A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BTTester;
+			productName = BTTester;
+			productReference = 9D7C260F1C6E39F4009FE76A /* BTTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		9D847F3E1C0F01B20037FB65 /* TelemetryCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D847F561C0F01B20037FB65 /* Build configuration list for PBXNativeTarget "TelemetryCenter" */;
+			buildPhases = (
+				1B7C2F3BD183A5A88536DFBE /* Check Pods Manifest.lock */,
+				9D847F3B1C0F01B20037FB65 /* Sources */,
+				9D847F3C1C0F01B20037FB65 /* Frameworks */,
+				9D847F3D1C0F01B20037FB65 /* Resources */,
+				6588A16599F35AA932F5EFFC /* Embed Pods Frameworks */,
+				D142ABDE852A5B725B260C64 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelemetryCenter;
+			productName = TelemetryCenter;
+			productReference = 9D847F3F1C0F01B20037FB65 /* TelemetryCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D847F371C0F01B20037FB65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Benno Krauss";
+				TargetAttributes = {
+					9D74C1891C6B5597009359FD = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					9D7C260E1C6E39F4009FE76A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					9D847F3E1C0F01B20037FB65 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = UZY7PKL64D;
+					};
+				};
+			};
+			buildConfigurationList = 9D847F3A1C0F01B20037FB65 /* Build configuration list for PBXProject "TelemetryCenter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D847F361C0F01B20037FB65;
+			productRefGroup = 9D847F401C0F01B20037FB65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D847F3E1C0F01B20037FB65 /* TelemetryCenter */,
+				9D74C1891C6B5597009359FD /* TCTester */,
+				9D7C260E1C6E39F4009FE76A /* BTTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D847F3D1C0F01B20037FB65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8A353A1C37F330003C799B /* genesis.png in Resources */,
+				9D847F521C0F01B20037FB65 /* LaunchScreen.storyboard in Resources */,
+				9D847F4F1C0F01B20037FB65 /* Assets.xcassets in Resources */,
+				9D847F4D1C0F01B20037FB65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B7C2F3BD183A5A88536DFBE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6588A16599F35AA932F5EFFC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D142ABDE852A5B725B260C64 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D74C1861C6B5597009359FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D7C260A1C6E39CC009FE76A /* DZBluetoothSerialHandler.swift in Sources */,
+				9D74C18D1C6B5597009359FD /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D7C260B1C6E39F4009FE76A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D7C26161C6E3A09009FE76A /* DZBluetoothSerialHandler.swift in Sources */,
+				9D7C26121C6E39F4009FE76A /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D847F3B1C0F01B20037FB65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D03795F1C382A2200D0F476 /* TCStatusViewController.m in Sources */,
+				9D5E84261C54E34E006268A5 /* TCRecorderViewController.swift in Sources */,
+				9D174E8C1C3848BE001B32D3 /* TCChartsViewController.swift in Sources */,
+				9D39B7541C3EEA2600F53F2D /* TCTrackRecorder.swift in Sources */,
+				9D847F4A1C0F01B20037FB65 /* ViewController.m in Sources */,
+				9D624EDB1C36F0BF00ADF06B /* MIDIController.mm in Sources */,
+				9D7C261A1C6E612A009FE76A /* BTCommon.m in Sources */,
+				9D1D38491C259533005F7F00 /* TCApplication.m in Sources */,
+				9D7C26091C6E3981009FE76A /* DZBluetoothSerialHandler.swift in Sources */,
+				9D8A35401C3806C0003C799B /* TCStatusLabel.m in Sources */,
+				9D847F471C0F01B20037FB65 /* AppDelegate.m in Sources */,
+				9DCEA0CB1C3946F500A6D718 /* TCChartView.swift in Sources */,
+				9D847F441C0F01B20037FB65 /* main.m in Sources */,
+				9D7C26181C6E41A0009FE76A /* BTController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D847F4B1C0F01B20037FB65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D847F4C1C0F01B20037FB65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D847F501C0F01B20037FB65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D847F511C0F01B20037FB65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D74C18E1C6B5597009359FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9D74C18F1C6B5597009359FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9D7C26141C6E39F4009FE76A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D7C26151C6E39F4009FE76A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9D847F541C0F01B20037FB65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D847F551C0F01B20037FB65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D847F571C0F01B20037FB65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BDA75CEEFE1D7428BBB8FA0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = TelemetryCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensge.TelemetryCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftBridging.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D847F581C0F01B20037FB65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAC4070BD3C4ADD3A5C7C5E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = TelemetryCenter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bensge.TelemetryCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftBridging.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D74C1901C6B5597009359FD /* Build configuration list for PBXNativeTarget "TCTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D74C18E1C6B5597009359FD /* Debug */,
+				9D74C18F1C6B5597009359FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D7C26131C6E39F4009FE76A /* Build configuration list for PBXNativeTarget "BTTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D7C26141C6E39F4009FE76A /* Debug */,
+				9D7C26151C6E39F4009FE76A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D847F3A1C0F01B20037FB65 /* Build configuration list for PBXProject "TelemetryCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D847F541C0F01B20037FB65 /* Debug */,
+				9D847F551C0F01B20037FB65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D847F561C0F01B20037FB65 /* Build configuration list for PBXNativeTarget "TelemetryCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D847F571C0F01B20037FB65 /* Debug */,
+				9D847F581C0F01B20037FB65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D847F371C0F01B20037FB65 /* Project object */;
+}
