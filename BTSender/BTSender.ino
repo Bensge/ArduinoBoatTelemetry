@@ -126,7 +126,7 @@ void loop()
     dallasSensors.requestTemperatures();
 	});
 
-  callEvery(333, {
+  callEvery(200, {
     p.mainVoltage = averageBatteryVoltage();
     p.arduinoVoltage = averageRawVoltage();
   });

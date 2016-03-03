@@ -50,7 +50,7 @@ void updateVoltageMeasurements()
 		}
 	});
 
-	callEvery(50,{
+	callEvery(25,{
 		//Battery
 		float voltage = batteryVoltage();
 

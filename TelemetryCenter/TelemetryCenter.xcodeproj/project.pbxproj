@@ -67,7 +67,7 @@
 		9D1D384A1C25B70F005F7F00 /* TCMessageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCMessageParser.h; sourceTree = "<group>"; };
 		9D1D384B1C25B70F005F7F00 /* TCMessageParser.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TCMessageParser.mm; sourceTree = "<group>"; };
 		9D39B7531C3EEA2600F53F2D /* TCTrackRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCTrackRecorder.swift; sourceTree = "<group>"; };
-		9D4DEBA31C26E45C00A5821E /* BTCommon.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = BTCommon.hpp; path = ../../../Arduino/libraries/BTCommon/BTCommon.hpp; sourceTree = "<group>"; wrapsLines = 1; };
+		9D4AE3E01C83292E00455D70 /* BTCommon.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BTCommon.hpp; path = ../../../libraries/BTCommon/BTCommon.hpp; sourceTree = "<group>"; };
 		9D5E84251C54E34E006268A5 /* TCRecorderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCRecorderViewController.swift; sourceTree = "<group>"; };
 		9D624ED91C36F0BF00ADF06B /* MIDIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIDIController.h; sourceTree = "<group>"; };
 		9D624EDA1C36F0BF00ADF06B /* MIDIController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MIDIController.mm; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 				9D847F4E1C0F01B20037FB65 /* Assets.xcassets */,
 				9D847F501C0F01B20037FB65 /* LaunchScreen.storyboard */,
 				9D847F531C0F01B20037FB65 /* Info.plist */,
-				9D4DEBA31C26E45C00A5821E /* BTCommon.hpp */,
+				9D4AE3E01C83292E00455D70 /* BTCommon.hpp */,
 				9D7C26191C6E612A009FE76A /* BTCommon.m */,
 				9D624ED91C36F0BF00ADF06B /* MIDIController.h */,
 				9D624EDA1C36F0BF00ADF06B /* MIDIController.mm */,
