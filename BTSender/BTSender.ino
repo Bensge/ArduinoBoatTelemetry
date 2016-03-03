@@ -32,7 +32,7 @@
 
 //GPS
 TinyGPSPlus gps;
-BTPacket p = {};
+BTPacket p = BTPacket();
 
 //SD
 

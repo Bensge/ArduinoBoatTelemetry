@@ -23,14 +23,14 @@ float rawVoltage();
 
 
 //Vars
-unsigned char vccValuesPosition = 0;
+uint8_t vccValuesPosition = 0;
 float vccValues[1/*100*/] = {0};
 
 float batteryValues[20] = {0};
-unsigned char batteryValuesPosition = 0;
+uint8_t batteryValuesPosition = 0;
 
 float rawValues[20] = {0};
-unsigned char rawValuesPosition = 0;
+uint8_t rawValuesPosition = 0;
 
 
 
@@ -148,7 +148,7 @@ float averageBatteryVoltage()
 	float averageValue = 0;
 	int num = 0;
 
-	for (unsigned char i = 0; i < arraySize(batteryValues); i++)
+	for (uint8_t i = 0; i < arraySize(batteryValues); i++)
 	{
 		averageValue += batteryValues[circularBufferPosition];
 		num++;
