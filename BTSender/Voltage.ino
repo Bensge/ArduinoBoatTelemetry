@@ -75,7 +75,7 @@ void updateVoltageMeasurements()
 
 float averageVCCVoltage()
 {
-  //Collect values from circular buffer
+	//Collect values from circular buffer
 	float values[30];
 
 	unsigned char bufferIndex = vccValuesPosition;
@@ -90,11 +90,11 @@ float averageVCCVoltage()
 			bufferIndex--;
 	}
 
-  	//Find smalles value and index
+	//Find smalles value and index
 	int smallestValueIndex = 0;
 	float smallestValue = 99999;
 
-  	//Find biggest value and index
+	//Find biggest value and index
 	int biggestValueIndex = 0;
 	float biggestValue = 0;
 
@@ -114,7 +114,7 @@ float averageVCCVoltage()
 	}
 
 
-  	//Average values, ignoring biggest and smallest value.
+	//Average values, ignoring biggest and smallest value.
 	float sum = 0;
 	int count = 0;
 
@@ -132,13 +132,13 @@ float averageVCCVoltage()
 
 float batteryVoltage()
 {
-  int regulatorVoltageValue = analogRead(RegulatorPin); //= 1023*3.3V/VCC
+	int regulatorVoltageValue = analogRead(RegulatorPin); //= 1023*3.3V/VCC
 
-  float unitsPerVolt = regulatorVoltageValue / 3.274f;
+	float unitsPerVolt = regulatorVoltageValue / 3.274f;
 
-  float v = analogRead(BatteryPin) / unitsPerVolt;
+	float v = analogRead(BatteryPin) / unitsPerVolt;
 
-  return v * 4.6; //Incorporate voltage divier with value of 4.6
+	return v * 4.6; //Incorporate voltage divier with value of 4.6
 }
 
 float averageBatteryVoltage()
@@ -167,13 +167,13 @@ float averageBatteryVoltage()
 
 float rawVoltage()
 {
-  int regulatorVoltageValue = analogRead(RegulatorPin); //= 1023*3.3V/VCC
+	int regulatorVoltageValue = analogRead(RegulatorPin); //= 1023*3.3V/VCC
 
-  float unitsPerVolt = regulatorVoltageValue / 3.274f;
+	float unitsPerVolt = regulatorVoltageValue / 3.274f;
 
-  float v = analogRead(RawPin) / unitsPerVolt;
+	float v = analogRead(RawPin) / unitsPerVolt;
 
-  return v * 2; //Incorporate voltage divier with value of 2
+	return v * 2; //Incorporate voltage divier with value of 2
 }
 
 float averageRawVoltage()

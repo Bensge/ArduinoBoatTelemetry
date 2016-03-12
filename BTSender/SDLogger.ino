@@ -16,7 +16,7 @@ void sdloggerInit()
 	{
 		Serial.println("Err open SD");
 	}
-  
+
 	int logFileNumber = 0;
 	String fileName;
 	do {
@@ -32,7 +32,7 @@ void sdloggerInit()
 	}
 	else {
 		//logFile.println("numberOfSatellites;time;speed;longitude;latitude;altitude;hdop;course");
-    	logFile.println("nos;t;s;lng;lat;alt;hdop;crs");
+	logFile.println("nos;t;s;lng;lat;alt;hdop;crs");
 	}
 }
 
@@ -54,7 +54,7 @@ void logPacket(BTPacket p)
 		);
 
 		logFile.println(lineBuffer);
-    logFile.flush();
+	logFile.flush();
 	}
 }
 
